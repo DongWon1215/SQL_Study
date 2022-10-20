@@ -51,3 +51,5 @@ select * from emp01 where ename = 'son';
 delete from emp01;
 
 create index index_emp01_ename on emp01(ename);
+
+select /* + index(emp01 index_emp01_ename)*/ * from emp01 where ename = 'son';
